@@ -1,7 +1,7 @@
 # Meetup React Native Lausanne
 URL : https://www.meetup.com/fr-FR/React-Native-enthusiasts-and-entrepreneurs/
 
-Ce meetup est open source :) La communauté peut participer à l'amélioration de ce meetup en utilisant ce repository GitHub.
+Ce meetup est open source :) La communauté peut participer à l'amélioration de ce meetup en utilisant ce repository.
 
 Vous pouvez formuler vos idées ou point d'amélioration en créant des issues GitHub.
 
