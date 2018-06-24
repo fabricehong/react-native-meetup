@@ -11,8 +11,10 @@ Exemple d'axes d'idées / propositions:
 - Organisation / logistique
 
 ## Installation de l'environnement de dévelopement
-- Faire le [getting started](https://facebook.github.io/react-native/docs/getting-started.html) avec "create react native app"
-- IDE: [Visual Studio Code](https://code.visualstudio.com/)
+1) Faire le [getting started](https://facebook.github.io/react-native/docs/getting-started.html) avec "create react native app"
+2) Si cela n'a pas déjà été fait dans l'étape 1, installer l'environnement expo ([XDE](https://docs.expo.io/versions/latest/introduction/installation))
+3) IDE: [Visual Studio Code](https://code.visualstudio.com/)
+4) Dans Visual Studio Code, installer l'extension "React Native Tools" (extensions: 4ème onglet sur la gauche)
 
 
 ## Calendrier
