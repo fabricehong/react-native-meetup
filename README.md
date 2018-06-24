@@ -21,7 +21,7 @@ Exemple d'axes d'idées / propositions:
 A venir
 
 ## Slack
-A venir
+Rejoignez notre [communauté Slack](https://join.slack.com/t/rn-romandie/shared_invite/enQtMzg3Mjc4NzEwOTk3LTkwODdkNjBkZGM3ZmM3MzI0ODljYjZmNGFlYTgyYTRkYjM0NTRjYWZjMDU2MmY3MWRkYWQ5MjBmNDI5OGYzYWQ) pour échanger, poser des questions, trouver de l'aide.
 
 ## Format du meetup
 A venir
