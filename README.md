@@ -10,6 +10,11 @@ Exemple d'axes d'idées / propositions:
 - Thématiques du meetup
 - Organisation / logistique
 
+## Installation de l'environnement de dévelopement
+- Faire le [getting started](https://facebook.github.io/react-native/docs/getting-started.html) avec "create react native app"
+- IDE: [Visual Studio Code](https://code.visualstudio.com/)
+
+
 ## Calendrier
 A venir
 
