@@ -11,7 +11,7 @@ Exemple d'axes d'idées / propositions:
 - Organisation / logistique
 
 ## Installation de l'environnement de dévelopement
-Il est important de venir au meetup avec un environnement capable de lancer le code visible dans un editeur sur un simulateur Android ou iOS. Cela peut prendre 1h de préparation, et impliquer +1Go de download (difficilement faisable sur place).
+Il est important de venir au meetup avec un environnement capable de lancer un code visible dans un editeur sur un simulateur Android ou iOS. Cela peut prendre 1h de préparation, et impliquer +1Go de download (difficilement faisable sur place).
 
 1) Faire le [getting started](https://facebook.github.io/react-native/docs/getting-started.html). Choisir la section "Building Projects with Native Code", et non "Quick start" avec "Create React Native app".
 2) IDE: [Visual Studio Code](https://code.visualstudio.com/)
