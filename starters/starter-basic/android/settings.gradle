@@ -1,0 +1,3 @@
+rootProject.name = 'meetup3maps'
+
+include ':app'
