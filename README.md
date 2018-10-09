@@ -36,6 +36,7 @@ Rejoignez notre [communauté Slack](https://join.slack.com/t/rn-romandie/shared_
 
 ### Branches
 ```
+/meetup-1-sujet1/dev (branche commune)
 /meetup-1-sujet1/john
 /meetup-1-sujet1/fabrice
 /meetup-x-sujetX/nom-x
