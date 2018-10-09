@@ -36,11 +36,7 @@ Rejoignez notre [communauté Slack](https://join.slack.com/t/rn-romandie/shared_
 
 ### Branches
 ```
-\starter
-\meetup-1-sujet1
-   \john
-   \fabrice
-\meetup-x-sujetX
-   \nom1
-   \nom2
+/meetup-1-sujet1/john
+/meetup-1-sujet1/fabrice
+/meetup-x-sujetX/nom-x
 ```
