@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, Alert, StyleSheet, TouchableHighlight } from 'react-native';
-import ScoreButton from './ScoreButton';
 
 
-const Button = (props)=>{
+const PrimaryButton = (props)=>{
     const {label, onPress} = props;
     return (
         <TouchableHighlight style={styles.button} onPress={onPress}>
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
     }
   });
   
-export default Button;
+export default PrimaryButton;
 
 
 /* 
