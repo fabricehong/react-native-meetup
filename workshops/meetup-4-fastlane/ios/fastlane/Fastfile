@@ -16,6 +16,16 @@
 default_platform(:ios)
 
 platform :ios do
+
+  desc "create provisional"
+  lane :certifs do
+    match(
+      type: "appstore",
+      git_url: "git@bitbucket.org:fabricehong/mobile-certificats.git",
+      force: true
+    )
+  end
+  
   desc "Push a new beta build to TestFlight"
   lane :beta do
     increment_build_number(xcodeproj: "fastlane.xcodeproj")
