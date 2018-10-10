@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, Button } from 'react-native';
+import { Text, View, TextInput, Button, Dimensions } from 'react-native';
 import PrimaryButton from './PrimaryButton';
+
+const { Twidth, Theight } = Dimensions.get('window');
 
 export default class PlayerSelection extends Component {
     constructor(props) {
@@ -21,7 +23,7 @@ export default class PlayerSelection extends Component {
         }
     }
 
-    removePlayer = (player) => {
+    removePlayer (player) {
         this.setState((prevState) => ({ players: prevState.players.filter((ele) => ele !== player) }));
     }
 
@@ -30,6 +32,7 @@ export default class PlayerSelection extends Component {
     }
 
     render() {
+    	const {toutSurUneligne, nomPlayer, lesBoutons, bouton } = styles;
         return (
             <View>
                 <Text>Enter your players !</Text>
@@ -40,9 +43,12 @@ export default class PlayerSelection extends Component {
                 />
                 <Button title="add" onPress={this.addPlayer}/>  
                 {this.state.players.map((ele) => 
-                    <View>
-                        <Text key={ele}>Joueur : {ele}</Text>
-                        <Button title="Delete" onPress={() => this.removePlayer(ele)}/>
+                    <View key={ele} style={toutSurUneligne} >
+                        <Text key={ele+'_2'} style={nomPlayer}>Joueur : {ele}</Text>
+                        <View key={ele+'_3'} style={lesBoutons}>
+				<Button key={ele+'_1'} style={bouton} title="X" onPress={() => this.removePlayer(ele)}/>
+				<Button key={ele+'_4'} style={bouton} title="O" onPress={() => this.removePlayer(ele)}/>
+			</View>
                     </View> 
                 )}
                 <PrimaryButton label="Start" onPress={this.startGame}/>
@@ -50,3 +56,25 @@ export default class PlayerSelection extends Component {
         )
     }
 }
+
+const styles = {
+	toutSurUneligne: {
+		flexDirection: 'row',
+		borderBottomWidth: 3,
+		borderColor: '#d6d7da',
+	},
+	nomPlayer: {
+		flex: 2,
+	},
+	lesBoutons: {
+		flex: 1,
+		flexDirection: 'row',
+	},
+	bouton: {
+		width : 20,
+		paddingHorizontal: 25, // ne fonctionne pas.		
+	},
+}
+
+
+
