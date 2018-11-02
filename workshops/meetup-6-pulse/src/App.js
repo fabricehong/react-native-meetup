@@ -1,28 +1,7 @@
-import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
-import Header from './components/Header'
+import React from 'react';
+import { View, Text } from 'react-native';
 import Map from './components/Map';
-
-class App extends Component {
-  render() {
-    return (
-      <View style={styles.mainView}>
-        <Header headerText="Pulse friends"/>
-        <Map />
-      </View>
-    )
-  }
-}
-
-class MapScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-}
+import {createBottomTabNavigator} from 'react-navigation';
 
 class CreateScreen extends React.Component {
   render() {
@@ -35,9 +14,6 @@ class CreateScreen extends React.Component {
 }
 
 export default createBottomTabNavigator({
-  Map: MapScreen,
+  Map: Map,
   Create: CreateScreen,
 });
-
-
-export default App;

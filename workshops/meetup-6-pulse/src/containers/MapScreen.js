@@ -1,3 +1,8 @@
+import React from 'react';
+import { View } from 'react-native';
+import Header from '../components/Header';
+import Map from '../components/Map';
+
 class MapScreen extends Component {
     render() {
       return (
