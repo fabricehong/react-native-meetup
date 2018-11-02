@@ -60,7 +60,5 @@ buck-out/
 # Source package.json
 package-lock.json
 
-android/app/src/main/AndroidManifest.xml
-
 
 
