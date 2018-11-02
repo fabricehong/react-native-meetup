@@ -7,17 +7,37 @@ class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Header headerText="Meetup 3 maps"/>
+        <Header headerText="Pulse friends"/>
         <Map />
       </View>
     )
   }
 }
 
-const styles = StyleSheet.create({
-  mainView: {
-    flex: 1
+class MapScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Home!</Text>
+      </View>
+    );
   }
+}
+
+class CreateScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Settings!</Text>
+      </View>
+    );
+  }
+}
+
+export default createBottomTabNavigator({
+  Map: MapScreen,
+  Create: CreateScreen,
 });
+
 
 export default App;
