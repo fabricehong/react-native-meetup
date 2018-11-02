@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Alert, StyleSheet, TouchableHighlight } from 'react-native';
+import Game from './Game';
 
 export default class App extends Component {
+  onPressButton = () => {
+    Alert.alert("yes");
+  }
+
+  onStart = () => {
+    Alert.alert("yes");
+  }
   render() {
     return (
-      <View>
-        <Text>Hello</Text>
-      </View>
+      <Game/>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  constainer: {
+    flex: 1,
+    backgroundColor: 'red',
+  },
+  
+});
