@@ -13,8 +13,11 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "23.2.0",
     "babel-preset-react-native": "4.0.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-react": "^7.11.1",
     "jest": "23.2.0",
     "react-test-renderer": "16.3.1"
   },
