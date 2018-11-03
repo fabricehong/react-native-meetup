@@ -96,7 +96,6 @@ def enableProguardInReleaseBuilds = false
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-    apply from: 'privateInfo.gradle'
 
     defaultConfig {
         applicationId "com.meetup3maps"
@@ -107,7 +106,6 @@ android {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
-        resValue "string", "google_maps_api_key", GOOGLE_MAPS_API_KEY
     }
     splits {
         abi {
