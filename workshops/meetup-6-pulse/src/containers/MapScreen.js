@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Header from '../components/Header';
 import Map from '../components/Map';
 
-class MapScreen extends Component {
+class MapScreen extends React.Component {
     render() {
       return (
         <View style={styles.mainView}>
