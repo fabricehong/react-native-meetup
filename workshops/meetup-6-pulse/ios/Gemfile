@@ -8,3 +8,6 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # Added at 2018-11-03 12:13:56 +0100 by fabricehong:
 gem "cocoapods", "~> 1.5"
+
+# Added at 2018-11-03 12:39:22 +0100 by fabricehong:
+gem "fastlane", "~> 2.107"
