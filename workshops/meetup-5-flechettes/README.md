@@ -18,4 +18,8 @@ Ce projet porte sur le jeu des Fléchettes Lausannoises : Il doit aider un joueu
 ![Alt text](./doc/game-states.svg)
 
 ## Interface utilisateur
-... à venir
+### Saisie des joueurs
+<img src="./doc/mockups/Saisie des joueurs.png">
+
+### Jeu
+<img src="./doc/mockups/Jeu.png">
