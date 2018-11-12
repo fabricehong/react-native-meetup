@@ -1,0 +1,30 @@
+@startuml
+' A visualiser avec le plugin VScode "PlantUML"
+[*]-->playerSelection
+state playerSelection as "Sélection des joueurs"
+playerSelection-->game
+state game as "Jeu" {
+    [*]-->turn
+    state turn as "Tour joueur X" {
+        [*]-->shoot
+        state shoot as "tir d'une flèche"
+        shoot-->shoot: 1..3
+    }
+    state score as "Score tour X" {
+        [*]-->scoreOk: score <= 300
+        [*]-->scoreNotOk: score > 300
+        state scoreOk as "Montrer résultat tour"
+        state scoreNotOk as "Montrer échec tour"
+    }
+    turn->score
+    score->turn
+    score->[*]: score == 300
+}
+
+state results as "Résultats jeu" {
+
+}
+game-->results
+results-->playerSelection
+
+@enduml
