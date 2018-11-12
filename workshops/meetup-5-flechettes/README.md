@@ -15,7 +15,8 @@ Ce projet porte sur le jeu des Fléchettes Lausannoises : Il doit aider un joueu
 - Modes additionnels :
     - Mode hardcore : si écart de 100 points ou plus, le score le plus bas est éliminé
 
-![Alt text](./doc/game-states.svg)
+### Diagramme d'état
+<img src="./doc/diagrams/game-states.svg">
 
 ## Interface utilisateur
 ### Saisie des joueurs
