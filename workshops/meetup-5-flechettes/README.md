@@ -36,7 +36,8 @@ Ce projet porte sur le jeu des Fléchettes Lausannoises : Il doit aider un joueu
 
 ## Outils utilisés pour la doc
 ### Diagrammes: PlantUML
-Utilisation du plugin VSCode "PlantUML"
+Utilisation de "PlantUML" ( http://plantuml.com/ )
+Conseil utiliser l'extension VSCode PlantUML en mode PlantUML-Server ( Lire doc de l'extension VSCode )
 #### Installation GraphViz: Linux
 ```
 sudo apt install python-pydot python-pydot-ng graphviz
@@ -49,4 +50,7 @@ Pour rendu rapide:
 https://github.com/plantuml/plantuml-server
 
 ### Mockups
-balzamiq
+Balzamiq ( https://balsamiq.com/ )
+
+### User Story Mapping
+Utilisation du service "Story On Map" ( https://storiesonboard.com/ )
