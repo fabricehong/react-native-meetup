@@ -25,6 +25,15 @@ Ce projet porte sur le jeu des Fléchettes Lausannoises : Il doit aider un joueu
 ### Jeu
 <img src="./doc/mockups/Jeu.png">
 
+### Scores
+<img src="./doc/mockups/Scores.png">
+
+### Résultats
+<img src="./doc/mockups/Resultats.png">
+
+## User Story Map
+<img src="./doc/user story maps/Rn-flechettes.png">
+
 ## Outils utilisés pour la doc
 ### Diagrammes: PlantUML
 Utilisation du plugin VSCode "PlantUML"
