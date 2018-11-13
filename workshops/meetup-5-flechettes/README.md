@@ -15,5 +15,33 @@ Ce projet porte sur le jeu des Fléchettes Lausannoises : Il doit aider un joueu
 - Modes additionnels :
     - Mode hardcore : si écart de 100 points ou plus, le score le plus bas est éliminé
 
-## Réflexions à faire
-- IHM de saisie du score, design à réflechir
+### Diagramme d'état
+<img src="./doc/diagrams/game-states.svg">
+
+## Interface utilisateur
+### Saisie des joueurs
+<img src="./doc/mockups/Saisie des joueurs.png">
+
+### Jeu
+<img src="./doc/mockups/Jeu.png">
+
+## Outils utilisés pour la doc
+### Diagrammes: PlantUML
+Utilisation de "PlantUML" ( http://plantuml.com/ )
+Conseil utiliser l'extension VSCode PlantUML en mode PlantUML-Server ( Lire doc de l'extension VSCode )
+#### Installation GraphViz: Linux
+```
+sudo apt install python-pydot python-pydot-ng graphviz
+```
+### Installation GraphViz: OSX
+```
+brew install graphviz
+```
+Pour rendu rapide:
+https://github.com/plantuml/plantuml-server
+
+### Mockups
+Balzamiq ( https://balsamiq.com/ )
+
+### User Story Mapping
+Utilisation du service "Story On Map" ( https://storiesonboard.com/ )
