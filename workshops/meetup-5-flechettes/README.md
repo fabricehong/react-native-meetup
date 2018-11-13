@@ -15,16 +15,6 @@ Ce projet porte sur le jeu des Fléchettes Lausannoises : Il doit aider un joueu
 - Modes additionnels :
     - Mode hardcore : si écart de 100 points ou plus, le score le plus bas est éliminé
 
-### Diagramme d'état
-<img src="./doc/diagrams/game-states.svg">
-
-## Interface utilisateur
-### Saisie des joueurs
-<img src="./doc/mockups/Saisie des joueurs.png">
-
-### Jeu
-<img src="./doc/mockups/Jeu.png">
-
 ## Outils utilisés pour la doc
 ### Diagrammes: PlantUML
 Utilisation de "PlantUML" ( http://plantuml.com/ )
