@@ -34,6 +34,13 @@ Ce projet porte sur le jeu des Fléchettes Lausannoises : Il doit aider un joueu
 ## User Story Map
 <img src="./doc/user story maps/Rn-flechettes.png">
 
+## Gestion du travail en groupe
+### tâches
+Voici le tableau Trello: https://trello.com/b/rh0GRZRM/rn-workshop-flechettes
+Faire une demande a Fabrice Hong pour être ajouté au tableau en écriture
+### code
+faire une demande a Fabrice Hong pour être ajouté au repo en écriture
+
 ## Outils utilisés pour la doc
 ### Diagrammes: PlantUML
 Utilisation de "PlantUML" ( http://plantuml.com/ )
