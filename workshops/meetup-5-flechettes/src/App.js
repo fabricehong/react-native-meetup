@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <View>
-        <Text>Hello World</Text>
+        <Text>Jeu de Fléchette  Lausannois</Text>
         <PlayerSelection/>
       </View>
     )
