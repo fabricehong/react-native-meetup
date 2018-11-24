@@ -28,8 +28,8 @@ export default class PlayerSelectionPageView extends Component {
     }
 
     startGame = () => {
-
-    }
+      this.props.navigation.navigate('gamePage')
+    };
 
     render() {
     	const {toutSurUneligne, nomPlayer, lesBoutons, bouton } = styles;
@@ -57,6 +57,7 @@ export default class PlayerSelectionPageView extends Component {
     }
 }
 
+
 const styles = {
 	toutSurUneligne: {
 		flexDirection: 'row',
@@ -74,7 +75,7 @@ const styles = {
 		width : 20,
 		paddingHorizontal: 25, // ne fonctionne pas.		
 	},
-}
+};
 
 
 
