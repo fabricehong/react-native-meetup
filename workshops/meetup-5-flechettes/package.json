@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "i": "react-native run-ios",
+    "a": "react-native run-android"
   },
   "dependencies": {
     "react": "^16.6.1",
     "react-native": "^0.57.5",
+    "react-native-gesture-handler": "^1.0.9",
     "react-navigation": "^3.0.0",
     "react-navigation-redux-helpers": "^2.0.8",
     "react-redux": "^5.1.1",
