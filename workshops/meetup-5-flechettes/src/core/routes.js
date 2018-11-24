@@ -1,5 +1,5 @@
-import PlayerSelectionPageView
-  from '../components/PlayerSelectionPage/PlayerSelectionPageView';
+import PlayerSelectionPage
+  from '../components/PlayerSelectionPage/PlayerSelectionPage';
 import GamePageView from '../components/GamePage/GamePageView';
 import PlayerScorePageView
   from '../components/PlayerScorePage/PlayerScorePageView';
@@ -7,7 +7,7 @@ import GameScorePageView from '../components/GameScorePage/GameScorePageView';
 
 const routes = {
   playerSelection: {
-    screen: PlayerSelectionPageView,
+    screen: PlayerSelectionPage,
     navigationOptions: () => ({
       headerTitle: 'Sélection des joueurs',
     })
