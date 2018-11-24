@@ -1,0 +1,1 @@
+export const getPlayers = (state) => (state.players.allPlayers);
