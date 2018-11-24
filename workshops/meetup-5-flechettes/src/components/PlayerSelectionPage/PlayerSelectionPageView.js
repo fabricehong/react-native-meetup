@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Text, View, TextInput, Button, Dimensions } from 'react-native';
-import PrimaryButton from './PrimaryButton';
+import PrimaryButton from '../common/PrimaryButton';
 
 const { Twidth, Theight } = Dimensions.get('window');
 
-export default class PlayerSelection extends Component {
+export default class PlayerSelectionPageView extends Component {
     constructor(props) {
         super(props);
         this.state = { text: 'Player 1', players: ['player'] };
