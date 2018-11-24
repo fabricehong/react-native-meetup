@@ -73,3 +73,12 @@ Il peut également être installé avec brew `brew install nvm`
 ### NPM vs YARN 
 Dans un soucis de simplification des dépendances, choissisons un gestionnaire de dépendances commmun. 
 Au hasard, npm.  
+
+### Dépendencies 
+
+  - [redux](https://redux.js.org)
+  - [react-redux](https://react-redux.js.org): React bindings for Redux
+   
+  
+  
+  
