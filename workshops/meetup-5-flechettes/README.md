@@ -1,21 +1,5 @@
 # Meetup 5 - Flechettes Lausannoises
 
-## Pré-requis 
-
-### node 10.13 
-
-Le gestionnaire de version de node peut-être utile [nvm](https://github.com/creationix/nvm).
-
-Il peut également être installé avec brew `brew install nvm`
-
-### react-native-cli
-
-`npm install -g react-native-cli` 
-
-### NPM vs YARN 
-Dans un soucis de simplification des dépendances, choissisons un gestionnaire de dépendances commmun. 
-Au hasard, npm.  
-
 ## Contexte
 
 Meetup : https://www.meetup.com/fr-FR/React-Native-enthusiasts-and-entrepreneurs/
@@ -73,3 +57,19 @@ Balzamiq ( https://balsamiq.com/ )
 
 ### User Story Mapping
 Utilisation du service "Story On Map" ( https://storiesonboard.com/ )
+
+## Pré-requis 
+
+### node 10.13 
+
+Le gestionnaire de version de node peut-être utile [nvm](https://github.com/creationix/nvm).
+
+Il peut également être installé avec brew `brew install nvm`
+
+### react-native-cli
+
+`npm install -g react-native-cli` 
+
+### NPM vs YARN 
+Dans un soucis de simplification des dépendances, choissisons un gestionnaire de dépendances commmun. 
+Au hasard, npm.  
