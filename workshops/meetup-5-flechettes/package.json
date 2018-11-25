@@ -5,17 +5,19 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --coverage",
-    "i": "react-native run-ios",
-    "a": "react-native run-android"
+    "i": "ENV=dev react-native run-ios",
+    "a": "ENV=dev react-native run-android"
   },
   "dependencies": {
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "react": "^16.6.1",
     "react-native": "^0.57.5",
     "react-native-gesture-handler": "^1.0.9",
     "react-navigation": "^3.0.0",
     "react-navigation-redux-helpers": "^2.0.8",
     "react-redux": "^5.1.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "babel-jest": "23.2.0",
