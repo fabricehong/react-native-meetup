@@ -1,7 +1,7 @@
 export const ADD_PLAYER = 'ADD_PLAYER';
 
-export const addPlayer = (name) => {
+export function addPlayer(name) {
   return {
-    type: ADD_PLAYER, payload: name,
+    type: ADD_PLAYER, name: name,
   };
-};
+}

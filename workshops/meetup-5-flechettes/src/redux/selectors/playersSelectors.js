@@ -1,1 +1,3 @@
-export const getPlayers = (state) => (state.players.allPlayers);
+
+
+export const getPlayers = (state) => (state.players.players);
