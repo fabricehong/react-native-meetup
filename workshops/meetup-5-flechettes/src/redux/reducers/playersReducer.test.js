@@ -1,19 +1,15 @@
 import * as actions from '../actions/playersActions';
+import playersReducer from './playersReducer';
 
 const defaultState = {
-  players: [],
+  players: []
 };
 
-const playersReducer = (state = defaultState, action) => {
+describe('playersReducer', () => {
 
-  switch (action.type) {
-    case actions.ADD_PLAYER:
-      const players = state.players;
-      players.push(action.name);
-      return {...state, players: players};
-    default:
-      return state;
-  }
-};
+  test('Add player action should add a player to the store', () => {
+    const newState = playersReducer(defaultState, actions.addPlayer('Jules'));
+    expect(newState).toMatchSnapshot();
+  });
 
-export default playersReducer;
+});
