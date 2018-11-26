@@ -21,16 +21,16 @@ export default class PlayerSelectionPageView extends PureComponent {
     this.props.navigation.navigate('gamePage');
   };
 
-  removePlayer(player) {
-    this.setState((prevState) => ({
-      players: prevState.players.filter((ele) => ele !== player),
-    }));
+  removePlayer(id) {
+    this.props.removePlayer(id);
   }
 
   render() {
     const {players} = this.props;
+    console.log(players);
     const {toutSurUneligne, nomPlayer, lesBoutons, bouton, input} = styles;
-    return (<View>
+    return (
+      <View>
       <Text>Enter your players !</Text>
       <TextInput
         style={input}
@@ -39,15 +39,20 @@ export default class PlayerSelectionPageView extends PureComponent {
         value={this.state.text}
       />
       <Button title="add" onPress={this.addPlayer}/>
-      {players.map((ele, i) => (<View key={i} style={toutSurUneligne}>
-        <Text key={ele + '_2'} style={nomPlayer}>Joueur : {ele}</Text>
-        <View key={ele + '_3'} style={lesBoutons}>
-          <Button key={ele + '_1'} style={bouton} title="X"
-                  onPress={() => this.removePlayer(ele, i)}/>
-          <Button key={ele + '_4'} style={bouton} title="O"
-                  onPress={() => this.removePlayer(ele)}/>
-        </View>
-      </View>))}
+      {
+        players.map((ele, i) => (
+          <View key={i} style={toutSurUneligne}>
+            <Text key={ele.name + i +  '_2'} style={nomPlayer}>Joueur : {ele.name}</Text>
+            <View key={ele.name + i + '_3'} style={lesBoutons}>
+              <Button key={ele.name + i +  '_1'} style={bouton} title="X"
+                      onPress={() => this.removePlayer(i)}/>
+              <Button key={ele.name + i + '_4'} style={bouton} title="O"
+                      onPress={() => this.removePlayer(i)}/>
+            </View>
+          </View>
+        ))
+      }
+
       <PrimaryButton label="Start" onPress={this.startGame}/>
     </View>);
   }

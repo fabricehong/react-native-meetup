@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {getPlayers} from '../../redux/selectors/playersSelectors';
-import {addPlayer} from '../../redux/actions/playersActions';
+import {addPlayer, removePlayer} from '../../redux/actions/playersActions';
 import PlayerSelectionPageView from './PlayerSelectionPageView';
 
 function mapStateToProps(state) {
@@ -12,7 +12,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    addPlayer
+    addPlayer,
+    removePlayer
   }, dispatch);
 }
 

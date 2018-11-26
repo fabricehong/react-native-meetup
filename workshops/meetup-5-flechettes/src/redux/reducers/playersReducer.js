@@ -1,4 +1,4 @@
-import * as actions from '../actions/playersActions';
+import {ADD_PLAYER, REMOVE_PLAYER} from '../actions/playersActions';
 
 const defaultState = {
   players: [],
@@ -6,11 +6,14 @@ const defaultState = {
 
 const playersReducer = (state = defaultState, action) => {
 
+  const players = state.players;
+
   switch (action.type) {
-    case actions.ADD_PLAYER:
-      const players = state.players;
-      players.push(action.name);
+    case ADD_PLAYER:
+      players.push({name: action.name, score: 0});
       return {...state, players: players};
+    case REMOVE_PLAYER:
+      return {...state, players: players.filter((v, i) => i !== action.id)};
     default:
       return state;
   }
