@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, Button, Dimensions } from 'react-native';
+import { Text, View, TextInput, Button, Dimensions,StyleSheet } from 'react-native';
 import PrimaryButton from './PrimaryButton';
 
 const { Twidth, Theight } = Dimensions.get('window');
@@ -7,7 +7,7 @@ const { Twidth, Theight } = Dimensions.get('window');
 export default class PlayerSelection extends Component {
     constructor(props) {
         super(props);
-        this.state = { text: 'Player 1', players: ['player'] };
+        this.state = { text: '', players: [] };
     }
 
     editPlayer = (text) => {
@@ -32,49 +32,64 @@ export default class PlayerSelection extends Component {
     }
 
     render() {
-    	const {toutSurUneligne, nomPlayer, lesBoutons, bouton } = styles;
+    
         return (
             <View>
-                <Text>Enter your players !</Text>
-                <TextInput
-                    style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-                    onChangeText={(text) => this.setState({ text })}
-                    value={this.state.text}
-                />
-                <Button title="add" onPress={this.addPlayer}/>  
+                
+
                 {this.state.players.map((ele) => 
-                    <View key={ele} style={toutSurUneligne} >
-                        <Text key={ele+'_2'} style={nomPlayer}>Joueur : {ele}</Text>
-                        <View key={ele+'_3'} style={lesBoutons}>
-				<Button key={ele+'_1'} style={bouton} title="X" onPress={() => this.removePlayer(ele)}/>
-				<Button key={ele+'_4'} style={bouton} title="O" onPress={() => this.removePlayer(ele)}/>
-			</View>
+                    <View key={ele} style={styles.toutSurUneligne} >
+                        <Text key={ele+'_2'} style={styles.nomPlayer}>{ele}</Text>
+                        <View key={ele+'_3'} style={styles.lesBoutons}>
+				            <Button key={ele+'_1'} style={styles.bouton} title="X" onPress={() => this.removePlayer(ele)}/>
+			            </View>  
                     </View> 
                 )}
+           <View  style={styles.toutSurUneligne} >
+                 
+                 <TextInput
+                     style={styles.inputNomPlayer}
+                     onChangeText={(text) => this.setState({ text })}
+                     placeholder='Nom du jouer'
+                     value={this.state.text}
+                 />
+
+                 <View  style={styles.lesBoutons}>
+                     <Button title="+"  onPress={this.addPlayer}/> 
+                 </View>
+             </View>
+             <View  style={styles.toutSurUneligne} >
                 <PrimaryButton label="Start" onPress={this.startGame}/>
+            </View> 
             </View>
         )
     }
 }
 
-const styles = {
+const styles = StyleSheet.create({
 	toutSurUneligne: {
 		flexDirection: 'row',
 		borderBottomWidth: 3,
 		borderColor: '#d6d7da',
 	},
 	nomPlayer: {
-		flex: 2,
+        flex: .7,
+        fontSize: 20,
+        fontWeight: 'bold',
 	},
 	lesBoutons: {
-		flex: 1,
+		flex: .3,
 		flexDirection: 'row',
+    },
+    inputNomPlayer: {
+        flex: .7,
+        fontSize: 20,
 	},
 	bouton: {
 		width : 20,
-		paddingHorizontal: 25, // ne fonctionne pas.		
+			
 	},
-}
+});
 
 
 
