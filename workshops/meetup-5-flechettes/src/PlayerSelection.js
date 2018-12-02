@@ -10,16 +10,24 @@ export default class PlayerSelection extends Component {
         this.state = { text: '', players: [] };
     }
 
-    editPlayer = (text) => {
-        let players = [ ...this.state.markers ];
-        markers[index] = {...markers[index], key: value};
-        this.setState({ markers });
-    }
+
 
     addPlayer = () => {
+        
         let input = this.state.text.trim();
-        if (input && !this.state.players.includes(input)) {
-            this.setState({ players :  [...this.state.players, input], text: ''});
+       
+        if (input) {
+            if(!this.state.players.includes(input)) {
+                if(this.state.players.length <=10){
+                    this.setState({ players :  [...this.state.players, input], text: ''});
+                }else{
+                    alert('Erreur: Max 10 joueurs');
+                }
+            }else{
+                alert('Erreur: Le nom du joueur est déjà presente dans la liste.');
+            }
+        }else{
+            alert('Erreur: Le nom du joueur ne peux pas être vide.');
         }
     }
 
@@ -28,48 +36,55 @@ export default class PlayerSelection extends Component {
     }
 
     startGame = () => {
-
+        if(this.state.players.length >1){
+            alert('Start Game');
+        }else{
+            alert('Erreur: Il faut saisir au moins deux joueur.');
+        }
     }
 
     render() {
     
         return (
-            <View>
-                
-
+            <View style={styles.container}>
                 {this.state.players.map((ele) => 
                     <View key={ele} style={styles.toutSurUneligne} >
                         <Text key={ele+'_2'} style={styles.nomPlayer}>{ele}</Text>
-                        <View key={ele+'_3'} style={styles.lesBoutons}>
-				            <Button key={ele+'_1'} style={styles.bouton} title="X" onPress={() => this.removePlayer(ele)}/>
+                        <View key={ele+'_3'} style={styles.boutonRemove}>
+				            <Button key={ele+'_1'}  title="X" onPress={() => this.removePlayer(ele)}/>
 			            </View>  
                     </View> 
                 )}
-           <View  style={styles.toutSurUneligne} >
-                 
+                <View  style={styles.toutSurUneligne} >
                  <TextInput
                      style={styles.inputNomPlayer}
                      onChangeText={(text) => this.setState({ text })}
                      placeholder='Nom du jouer'
                      value={this.state.text}
+                     
                  />
 
-                 <View  style={styles.lesBoutons}>
-                     <Button title="+"  onPress={this.addPlayer}/> 
+                 <View  style={styles.boutonAdd}>
+                     <Button title="+"  onPress={this.addPlayer}  /> 
                  </View>
-             </View>
-             <View  style={styles.toutSurUneligne} >
-                <PrimaryButton label="Start" onPress={this.startGame}/>
-            </View> 
+                </View>
+                <View  style={styles.boutonStart} >
+                    <PrimaryButton label="Start" onPress={this.startGame}/>
+                </View> 
             </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
-	toutSurUneligne: {
+	container: {
+		
+		borderColor: '#d6d7da',
+	},
+
+    toutSurUneligne: {
 		flexDirection: 'row',
-		borderBottomWidth: 3,
+		borderBottomWidth: 1,
 		borderColor: '#d6d7da',
 	},
 	nomPlayer: {
@@ -77,9 +92,18 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
 	},
-	lesBoutons: {
+	boutonRemove: {
+		flex: .3,
+        flexDirection: 'row',
+        borderColor: 'red'
+    },
+    boutonAdd: {
 		flex: .3,
 		flexDirection: 'row',
+    },
+    boutonStart: {
+	
+		alignItems:'flex-end', 
     },
     inputNomPlayer: {
         flex: .7,
