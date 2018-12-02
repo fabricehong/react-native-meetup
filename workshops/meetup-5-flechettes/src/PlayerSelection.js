@@ -48,18 +48,18 @@ export default class PlayerSelection extends Component {
         return (
             <View style={styles.container}>
                 {this.state.players.map((ele) => 
-                    <View key={ele} style={styles.toutSurUneligne} >
+                    <View>
                         <Text key={ele+'_2'} style={styles.nomPlayer}>{ele}</Text>
                         <View key={ele+'_3'} style={styles.boutonRemove}>
-				            <Button key={ele+'_1'}  title="X" onPress={() => this.removePlayer(ele)}/>
+				            <Button key={ele+'_1'}  title="x" onPress={() => this.removePlayer(ele)}/>
 			            </View>  
                     </View> 
                 )}
-                <View  style={styles.toutSurUneligne} >
+               
                  <TextInput
                      style={styles.inputNomPlayer}
                      onChangeText={(text) => this.setState({ text })}
-                     placeholder='Nom du jouer'
+                     placeholder='Nom jouer'
                      value={this.state.text}
                      
                  />
@@ -67,7 +67,7 @@ export default class PlayerSelection extends Component {
                  <View  style={styles.boutonAdd}>
                      <Button title="+"  onPress={this.addPlayer}  /> 
                  </View>
-                </View>
+                
                 <View  style={styles.boutonStart} >
                     <PrimaryButton label="Start" onPress={this.startGame}/>
                 </View> 
@@ -78,41 +78,33 @@ export default class PlayerSelection extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-		
-		borderColor: '#d6d7da',
+        flex: 1,
+        flexDirection: 'row',
+     	borderColor: '#d6d7da',
 	},
 
-    toutSurUneligne: {
-		flexDirection: 'row',
-		borderBottomWidth: 1,
-		borderColor: '#d6d7da',
-	},
+   
 	nomPlayer: {
-        flex: .7,
+        flex: .9,
         fontSize: 20,
+       
         fontWeight: 'bold',
 	},
 	boutonRemove: {
-		flex: .3,
-        flexDirection: 'row',
-        borderColor: 'red'
-    },
-    boutonAdd: {
-		flex: .3,
-		flexDirection: 'row',
-    },
-    boutonStart: {
-	
-		alignItems:'flex-end', 
+        flex: .1,  
     },
     inputNomPlayer: {
-        flex: .7,
+        flex: .9,
         fontSize: 20,
 	},
-	bouton: {
-		width : 20,
-			
-	},
+    boutonAdd: {
+        flex: .1,
+    },
+    boutonStart: {
+		alignItems:'flex-start', 
+    },
+   
+
 });
 
 
