@@ -43,25 +43,30 @@ export default class PlayerSelection extends Component {
         }
     }
         render() {
-            const {toutSurUneligne, nomPlayer, lesBoutons, bouton } = styles;
+            const {toutSurUneligne, nomPlayer, lesBoutons,inputNom } = styles;
             return (
-                <View>
-                    <Text>Enter your players !</Text>
-                    <TextInput
-                        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-                        onChangeText={(text) => this.setState({ text })}
-                        value={this.state.text}
-                    />
-                    <Button title="add" onPress={this.addPlayer}/>  
-                    {this.state.players.map((ele) => 
+                    <View>
+                        {this.state.players.map((ele) => 
                         <View key={ele} style={toutSurUneligne} >
-                            <Text key={ele+'_2'} style={nomPlayer}>Joueur : {ele}</Text>
+                            <Text key={ele+'_2'} style={nomPlayer}>{ele}</Text>
                             <View key={ele+'_3'} style={lesBoutons}>
-                    <Button key={ele+'_1'} style={bouton} title="X" onPress={() => this.removePlayer(ele)}/>
-                    <Button key={ele+'_4'} style={bouton} title="O" onPress={() => this.removePlayer(ele)}/>
-                </View>
+                                 <Button key={ele+'_1'}  title="X" onPress={() => this.removePlayer(ele)}/>
+                            </View>
                         </View> 
                     )}
+                    <View  style={toutSurUneligne} >
+                        <TextInput
+                            style={inputNom}
+                            placeholder='Nom jouer'
+                            onChangeText={(text) => this.setState({ text })}
+                            value={this.state.text}
+                        />
+                        <View style={lesBoutons}>
+                            <Button title="+"  onPress={this.addPlayer}/>  
+                        </View>  
+                    </View>
+                    
+                 
                     <PrimaryButton label="Start" onPress={this.startGame}/>
                 </View>
             )
@@ -71,19 +76,25 @@ export default class PlayerSelection extends Component {
     const styles = {
         toutSurUneligne: {
             flexDirection: 'row',
-            borderBottomWidth: 3,
+            borderBottomWidth: 2,
             borderColor: '#d6d7da',
         },
         nomPlayer: {
-            flex: 2,
+            flex: 10,
+            fontWeight: 'bold',
+            margin: 4,
         },
         lesBoutons: {
             flex: 1,
             flexDirection: 'row',
         },
-        bouton: {
-            width : 20,
-            paddingHorizontal: 25, // ne fonctionne pas.		
+       
+        inputNom: {
+            flex: 10,
+            color:'grey',
+            margin: 4,
+            borderColor: 'gray', 
+            borderWidth: 1
         },
     }
 
