@@ -1,15 +1,27 @@
 import React, {PureComponent} from 'react';
-import {string, number} from 'prop-types';
-import {Button, Text, TextInput, View} from 'react-native';
-import PrimaryButton from '../common/PrimaryButton';
+import {number, string} from 'prop-types';
+import {
+  Button,
+  Container,
+  Content,
+  Footer,
+  Form,
+  Icon,
+  Input,
+  Item,
+  Label,
+  Left,
+  List,
+  ListItem,
+  Right,
+} from 'native-base';
 
 const DEFAULT_STATE = {text: '', focus: 0};
 
 export default class PlayerSelectionPageView extends PureComponent {
 
   static propTypes = {
-    text: string,
-    focus: number
+    text: string, focus: number,
   };
 
   constructor(props) {
@@ -45,58 +57,79 @@ export default class PlayerSelectionPageView extends PureComponent {
   }
 
   hasEnoughPlayers() {
-    return this.props.players.length > 1
+    return this.props.players.length > 1;
+  }
+
+  renderList() {
+    return (
+      <List>
+        {this.props.players.map((ele, index) =>
+          <ListItem key={index}>
+            <Left>
+              <Input placeholder={'Player ' + index}
+                     onChangeText={(text) => {
+                       this.setPlayerName(text, index);
+                     }}
+                     autoFocus={index === this.state.focus}
+                     onFocus={() => this.setState({focus: index})}
+                     autoCorrect={false}
+                     value={ele.name}
+                     key={ele.name + index}
+              />
+            </Left>
+            <Right>
+              <Button iconLeft transparent danger
+                      onPress={() => this.removePlayer(index)}>
+                <Icon name='trash'/>
+              </Button>
+            </Right>
+          </ListItem>
+        )}
+      </List>
+    );
+  }
+
+  renderStartButton() {
+    if (this.hasEnoughPlayers()) {
+      return (<Button iconLeft success full onPress={this.startGame}>
+        <Icon name={'play'}/>
+      </Button>);
+    } else {
+      return (<Button iconLeft disabled full onPress={this.startGame}>
+        <Icon name={'play'}/>
+      </Button>);
+    }
   }
 
   render() {
-    const {toutSurUneligne, nomPlayer, bouton, input} = styles;
-    return (<View>
-        <Text>Enter your players !</Text>
-        <TextInput
-          autoFocus={this.state === 0}
-          style={input}
-          onChangeText={(text) => this.setState({text})}
-          placeholder={'Enter a player name'}
-          value={this.state.text}
-          autoCorrect={false}
-        />
-        <Button title="add" onPress={this.addPlayer}/>
-        {
-          this.props.players.map(
-          (ele, i) => (
-            <View key={i} style={toutSurUneligne}>
-              <TextInput
-                autoFocus={i === this.state.focus}
-                onFocus={() => this.setState({focus: i})}
+    return (
+      <Container>
+        <Content>
+          <Form>
+            <Item floatingLabel>
+              <Label>Enter a player name</Label>
+              <Input
+                autoFocus={this.state === 0}
+                onChangeText={(text) => this.setState({text})}
+                value={this.state.text}
                 autoCorrect={false}
-                onChangeText={(text) => {
-                  this.setPlayerName(text, i);
-                }}
-                value={ele.name}
-                key={ele.name + i + '_2'} style={nomPlayer}/>
-              <Button key={ele.name + i + '_1'} style={bouton} title="X"
-                      onPress={() => this.removePlayer(i)}/>
-            </View>
-          ))
-        }
-        <PrimaryButton disabled={!this.hasEnoughPlayers()} label="Start" onPress={this.startGame}/>
-      </View>);
+              />
+            </Item>
+            <Button iconLeft full primary onPress={this.addPlayer}>
+              <Icon name={'add'}/>
+            </Button>
+          </Form>
+          {this.renderList()}
+        </Content>
+        <Footer>
+          <Content>
+            {this.renderStartButton()}
+          </Content>
+        </Footer>
+      </Container>
+    );
   }
 }
-
-const styles = {
-  toutSurUneligne: {
-    flexDirection: 'row', borderBottomWidth: 3, borderColor: '#d6d7da',
-  }, nomPlayer: {
-    flex: 2,
-  }, lesBoutons: {
-    flex: 1, flexDirection: 'row',
-  }, bouton: {
-    width: 20, paddingHorizontal: 25, // ne fonctionne pas.
-  }, input: {
-    height: 40, borderColor: 'gray', borderWidth: 1,
-  },
-};
 
 
 
