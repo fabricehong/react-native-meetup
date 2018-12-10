@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "native-base": "^2.8.1",
     "react": "^16.6.1",
     "react-native": "^0.57.5",
     "react-native-gesture-handler": "^1.0.9",
