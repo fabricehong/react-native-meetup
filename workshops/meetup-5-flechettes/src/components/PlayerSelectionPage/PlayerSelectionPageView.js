@@ -44,6 +44,10 @@ export default class PlayerSelectionPageView extends PureComponent {
     this.props.setPlayerName(name, id);
   }
 
+  hasEnoughPlayers() {
+    return this.props.players.length > 1
+  }
+
   render() {
     const {toutSurUneligne, nomPlayer, bouton, input} = styles;
     return (<View>
@@ -75,7 +79,7 @@ export default class PlayerSelectionPageView extends PureComponent {
             </View>
           ))
         }
-        <PrimaryButton label="Start" onPress={this.startGame}/>
+        <PrimaryButton disabled={!this.hasEnoughPlayers()} label="Start" onPress={this.startGame}/>
       </View>);
   }
 }
