@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrimaryButton should renders correctly 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#aaaaff",
+      "margin": 10,
+      "padding": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  />
+</View>
+`;

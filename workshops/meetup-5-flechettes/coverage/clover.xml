@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1543067803247" clover="3.2.0">
+  <project timestamp="1543067803247" name="All files">
+    <metrics statements="50" coveredstatements="41" conditionals="217" coveredconditionals="114" methods="77" coveredmethods="52" elements="344" coveredelements="207" complexity="0" loc="50" ncloc="50" packages="5" files="5" classes="5">
+      <package name="GamePage">
+        <metrics statements="6" coveredstatements="6" conditionals="47" coveredconditionals="27" methods="14" coveredmethods="12"/>
+        <file name="GamePageView.js" path="/Users/arnaudbeguin/Repos/meetup/react-native-meetup/workshops/meetup-5-flechettes/src/components/GamePage/GamePageView.js">
+          <metrics statements="6" coveredstatements="6" conditionals="47" coveredconditionals="27" methods="14" coveredmethods="12"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="19" type="cond" truecount="27" falsecount="20"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="GameScorePage">
+        <metrics statements="6" coveredstatements="6" conditionals="47" coveredconditionals="27" methods="14" coveredmethods="12"/>
+        <file name="GameScorePageView.js" path="/Users/arnaudbeguin/Repos/meetup/react-native-meetup/workshops/meetup-5-flechettes/src/components/GameScorePage/GameScorePageView.js">
+          <metrics statements="6" coveredstatements="6" conditionals="47" coveredconditionals="27" methods="14" coveredmethods="12"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="19" type="cond" truecount="27" falsecount="20"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="PlayerScorePage">
+        <metrics statements="6" coveredstatements="6" conditionals="47" coveredconditionals="27" methods="14" coveredmethods="12"/>
+        <file name="PlayerScorePageView.js" path="/Users/arnaudbeguin/Repos/meetup/react-native-meetup/workshops/meetup-5-flechettes/src/components/PlayerScorePage/PlayerScorePageView.js">
+          <metrics statements="6" coveredstatements="6" conditionals="47" coveredconditionals="27" methods="14" coveredmethods="12"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="19" type="cond" truecount="27" falsecount="20"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="PlayerSelectionPage">
+        <metrics statements="25" coveredstatements="16" conditionals="72" coveredconditionals="30" methods="33" coveredmethods="14"/>
+        <file name="PlayerSelectionPageView.js" path="/Users/arnaudbeguin/Repos/meetup/react-native-meetup/workshops/meetup-5-flechettes/src/components/PlayerSelectionPage/PlayerSelectionPageView.js">
+          <metrics statements="25" coveredstatements="16" conditionals="72" coveredconditionals="30" methods="33" coveredmethods="14"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="19" type="cond" truecount="30" falsecount="38"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="common">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <file name="PrimaryButton.js" path="/Users/arnaudbeguin/Repos/meetup/react-native-meetup/workshops/meetup-5-flechettes/src/components/common/PrimaryButton.js">
+          <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

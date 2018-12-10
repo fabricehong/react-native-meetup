@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`playersReducer Add player action should add a player to the store 1`] = `
+Object {
+  "players": Array [
+    Object {
+      "name": "Jules",
+      "score": 0,
+    },
+  ],
+}
+`;
+
+exports[`playersReducer removePlayer, remove a player when there is 2 players should work 1`] = `
+Object {
+  "players": Array [
+    Object {
+      "name": "Lukas",
+      "score": 1,
+    },
+  ],
+}
+`;
+
+exports[`playersReducer removePlayer, remove a player when there is no players should do nothing 1`] = `
+Object {
+  "players": Array [],
+}
+`;

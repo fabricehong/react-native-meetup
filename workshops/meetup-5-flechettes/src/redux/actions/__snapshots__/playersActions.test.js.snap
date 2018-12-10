@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`playersActions addPlayer should create an ADD_PLAYER action with the player name 1`] = `
+Object {
+  "name": "Jules",
+  "type": "ADD_PLAYER",
+}
+`;
+
+exports[`playersActions addPlayer should create an ADD_PLAYER action with the player name 2`] = `
+Object {
+  "id": 0,
+  "type": "REMOVE_PLAYER",
+}
+`;
+
+exports[`playersActions addPlayer should create an ADD_PLAYER action with the player name 3`] = `
+Object {
+  "id": "Jules",
+  "name": 0,
+  "type": "SET_PLAYER_NAME",
+}
+`;
