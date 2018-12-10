@@ -18,7 +18,8 @@
     "react-navigation-redux-helpers": "^2.0.8",
     "react-redux": "^5.1.1",
     "redux": "^4.0.1",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "prop-types": "latest"
   },
   "devDependencies": {
     "babel-jest": "23.2.0",
