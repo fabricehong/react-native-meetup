@@ -15,13 +15,16 @@ const env = process.env['ENV'];
 const middleware = createReactNavigationReduxMiddleware('root',
   state => state.nav);
 
+/*
 let logger;
 if (env === 'dev') {
   logger = createLogger({
     collapsed: true,
   });
 }
+*/
 
-const store = createStore(appReducer, applyMiddleware(middleware, logger));
+const store = createStore(appReducer, applyMiddleware(middleware));
+// const store = createStore(appReducer, applyMiddleware(middleware, logger));
 
 export default store;
