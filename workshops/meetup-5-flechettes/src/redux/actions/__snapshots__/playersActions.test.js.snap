@@ -1,61 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`playersActions addPlayer should create an ADD_PLAYER action with the player name 1`] = `
-Array [
-  Object {
-    "name": "Jules",
-    "type": "ADD_PLAYER",
-  },
-]
+Object {
+  "name": "Jules",
+  "type": "ADD_PLAYER",
+}
 `;
 
 exports[`playersActions addPlayer should create an ADD_PLAYER action with the player name 2`] = `
-Array [
-  Object {
-    "name": "Jules",
-    "type": "ADD_PLAYER",
-  },
-  Object {
-    "id": 0,
-    "type": "REMOVE_PLAYER",
-  },
-]
+Object {
+  "id": 0,
+  "type": "REMOVE_PLAYER",
+}
 `;
 
 exports[`playersActions addPlayer should create an ADD_PLAYER action with the player name 3`] = `
-Array [
-  Object {
-    "name": "Jules",
-    "type": "ADD_PLAYER",
-  },
-  Object {
-    "id": 0,
-    "type": "REMOVE_PLAYER",
-  },
-  Object {
-    "id": 0,
-    "type": "SET_PLAYER_NAME",
-  },
-]
-`;
-
-exports[`playersActions addPlayer should create an ADD_PLAYER action with the player name 4`] = `
-Array [
-  Object {
-    "name": "Jules",
-    "type": "ADD_PLAYER",
-  },
-  Object {
-    "id": 0,
-    "type": "REMOVE_PLAYER",
-  },
-  Object {
-    "id": 0,
-    "type": "SET_PLAYER_NAME",
-  },
-  Object {
-    "id": 1,
-    "type": "SET_PLAYER_SCORE",
-  },
-]
+Object {
+  "id": "Jules",
+  "name": 0,
+  "type": "SET_PLAYER_NAME",
+}
 `;

@@ -1,60 +1,82 @@
 import React, {PureComponent} from 'react';
+import {string, number} from 'prop-types';
 import {Button, Text, TextInput, View} from 'react-native';
 import PrimaryButton from '../common/PrimaryButton';
 
+const DEFAULT_STATE = {text: '', focus: 0};
+
 export default class PlayerSelectionPageView extends PureComponent {
+
+  static propTypes = {
+    text: string,
+    focus: number
+  };
 
   constructor(props) {
     super(props);
-    this.state = {text: ''};
+    this.state = {...DEFAULT_STATE};
   }
 
+  // Add a player to the player's list
   addPlayer = () => {
-    let input = this.state.text.trim();
-    if (input && !this.props.players.includes(input)) {
-      this.props.addPlayer(input);
+
+    // retrieve the player's name
+    let name = this.state.text.trim();
+
+    // check if there's nobody with the same name
+    if (name && !this.props.players.includes(name)) {
+      this.props.addPlayer(name);
     }
+
+    // reset the main input text
     this.setState({text: ''});
   };
 
   startGame = () => {
-    this.props.navigation.navigate('gamePage');
+    return this.props.navigation.navigate('gamePage');
   };
 
   removePlayer(id) {
     this.props.removePlayer(id);
   }
 
+  setPlayerName(name, id) {
+    this.props.setPlayerName(name, id);
+  }
+
   render() {
-    const {players} = this.props;
-    console.log(players);
-    const {toutSurUneligne, nomPlayer, lesBoutons, bouton, input} = styles;
-    return (
-      <View>
-      <Text>Enter your players !</Text>
-      <TextInput
-        style={input}
-        onChangeText={(text) => this.setState({text})}
-        placeholder={'Enter a player name'}
-        value={this.state.text}
-      />
-      <Button title="add" onPress={this.addPlayer}/>
-      {
-        players.map((ele, i) => (
-          <View key={i} style={toutSurUneligne}>
-            <Text key={ele.name + i +  '_2'} style={nomPlayer}>Joueur : {ele.name}</Text>
-            <View key={ele.name + i + '_3'} style={lesBoutons}>
-              <Button key={ele.name + i +  '_1'} style={bouton} title="X"
-                      onPress={() => this.removePlayer(i)}/>
-              <Button key={ele.name + i + '_4'} style={bouton} title="O"
+    const {toutSurUneligne, nomPlayer, bouton, input} = styles;
+    return (<View>
+        <Text>Enter your players !</Text>
+        <TextInput
+          autoFocus={this.state === 0}
+          style={input}
+          onChangeText={(text) => this.setState({text})}
+          placeholder={'Enter a player name'}
+          value={this.state.text}
+          autoCorrect={false}
+        />
+        <Button title="add" onPress={this.addPlayer}/>
+        {
+          this.props.players.map(
+          (ele, i) => (
+            <View key={i} style={toutSurUneligne}>
+              <TextInput
+                autoFocus={i === this.state.focus}
+                onFocus={() => this.setState({focus: i})}
+                autoCorrect={false}
+                onChangeText={(text) => {
+                  this.setPlayerName(text, i);
+                }}
+                value={ele.name}
+                key={ele.name + i + '_2'} style={nomPlayer}/>
+              <Button key={ele.name + i + '_1'} style={bouton} title="X"
                       onPress={() => this.removePlayer(i)}/>
             </View>
-          </View>
-        ))
-      }
-
-      <PrimaryButton label="Start" onPress={this.startGame}/>
-    </View>);
+          ))
+        }
+        <PrimaryButton label="Start" onPress={this.startGame}/>
+      </View>);
   }
 }
 

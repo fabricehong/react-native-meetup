@@ -7,6 +7,8 @@ exports[`PlayerSelectionPageView should renders correctly 1`] = `
   </Text>
   <TextInput
     allowFontScaling={true}
+    autoCorrect={false}
+    autoFocus={false}
     onChangeText={[Function]}
     placeholder="Enter a player name"
     style={

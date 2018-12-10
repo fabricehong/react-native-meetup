@@ -15,14 +15,8 @@ export function removePlayer(id) {
   };
 }
 
-export function setPlayerName(id, name) {
+export function setPlayerName(name, id) {
   return {
-    type: SET_PLAYER_NAME, id: id,
-  };
-}
-
-export function setPlayerScore(id) {
-  return {
-    type: SET_PLAYER_SCORE, id: id,
+    type: SET_PLAYER_NAME, id: id, name:name
   };
 }
