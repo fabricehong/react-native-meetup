@@ -1,4 +1,4 @@
-import {applyMiddleware, combineReducers, createStore} from 'redux';
+import {applyMiddleware, combineReducers, createStore, compose} from 'redux';
 import {createReactNavigationReduxMiddleware} from 'react-navigation-redux-helpers';
 import navigationReducer from '../redux/reducers/navigationReducer';
 import playersReducer from '../redux/reducers/playersReducer';
@@ -24,7 +24,10 @@ if (env === 'dev') {
 }
 */
 
-const store = createStore(appReducer, applyMiddleware(middleware));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(appReducer, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 // const store = createStore(appReducer, applyMiddleware(middleware, logger));
 
 export default store;

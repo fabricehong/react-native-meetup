@@ -86,6 +86,18 @@ Au hasard, npm.
   - [redux](https://redux.js.org)
   - [react-redux](https://react-redux.js.org): React bindings for Redux
    
-  
-  
-  
+## Debugging
+First of all, install React Native Debugger to debug : https://github.com/jhen0409/react-native-debugger
+
+Then start it doing (mac OSX only, for other platform, check the docs):
+```
+yarn debug
+```
+
+### Connecting to debug
+Just these steps let you start RNDebugger out of box:
+
+Make sure all debugger clients of React Native are closed, usually are http://localhost:<port>/debugger-ui
+Make sure RNDebugger is open and wait state.
+RNDebugger will try connect to debugger proxy, use port 8081 by default, you can new debugger window (macOS: Command+T, Linux/Windows: Ctrl+T) to specify the port if you want.
+Enable Debug JS Remotely of developer menu on your app

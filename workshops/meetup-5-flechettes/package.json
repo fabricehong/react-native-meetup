@@ -6,11 +6,13 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest --coverage",
     "i": "ENV=dev react-native run-ios",
-    "a": "ENV=dev react-native run-android"
+    "a": "ENV=dev react-native run-android",
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'"
   },
   "dependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "native-base": "^2.8.1",
+    "prop-types": "latest",
     "react": "^16.6.1",
     "react-native": "^0.57.5",
     "react-native-gesture-handler": "^1.0.9",
@@ -19,7 +21,7 @@
     "react-redux": "^5.1.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "prop-types": "latest"
+    "redux-persist": "^5.10.0"
   },
   "devDependencies": {
     "babel-jest": "23.2.0",
