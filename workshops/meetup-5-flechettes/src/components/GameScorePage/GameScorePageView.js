@@ -1,41 +1,25 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
+import PropTypes, { shape, string, number } from 'prop-types';
 import {
-  Button,
   Container,
   Content,
-  Footer,
-  Form,
-  Icon,
-  Input,
-  Item,
   Label,
-  Left,
-  List,
-  ListItem,
-  Right,
   Body,
   H1
 } from 'native-base';
 
 export class GameScorePageView extends PureComponent {
-  renderResult() {
-    playersList = [
-      {
-        name: 'Fabrice',
-        score: 300
-      },
-      {
-        name: 'Alpha',
-        score: 299
-      },
-      {
-        name: 'Arnaud',
-        score: 12
-      }
-    ];
 
-    const labels = playersList.map((player, index) => {
+  static propTypes = {
+    players: PropTypes.arrayOf(shape({
+      name: string,
+      score: number
+    })).isRequired
+  }
+
+  renderResult() {
+    const labels = this.props.players.map((player, index) => {
       const text = `${player.name}: ${player.score}`;
       return index === 0 ? <H1 key={index}>{text}</H1> : <Label key={index}>{text}</Label>
     });

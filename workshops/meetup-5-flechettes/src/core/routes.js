@@ -3,7 +3,7 @@ import PlayerSelectionPage
 import GamePageView from '../components/GamePage/GamePageView';
 import PlayerScorePageView
   from '../components/PlayerScorePage/PlayerScorePageView';
-import GameScorePageView from '../components/GameScorePage/GameScorePageView';
+import GameScorePage from '../components/GameScorePage/GameScorePage';
 
 const routes = {
   playerSelection: {
@@ -22,7 +22,7 @@ const routes = {
       headerTitle: 'Score',
     })
   }, gameScore: {
-    screen: GameScorePageView,
+    screen: GameScorePage,
     navigationOptions: () => ({
       headerTitle: 'Classement',
     })
