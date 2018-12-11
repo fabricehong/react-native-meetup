@@ -3,6 +3,8 @@ import {createReactNavigationReduxMiddleware} from 'react-navigation-redux-helpe
 import navigationReducer from '../redux/reducers/navigationReducer';
 import playersReducer from '../redux/reducers/playersReducer';
 import {createLogger} from 'redux-logger';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'
 
 // Combine reducers
 const appReducer = combineReducers({
@@ -23,11 +25,22 @@ if (env === 'dev') {
   });
 }
 */
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+const persistedReducer = persistReducer(persistConfig, appReducer);
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(appReducer, 
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const store = createStore(persistedReducer, 
+  composeEnhancers(
+    applyMiddleware(middleware)
+  )
+);
+
+persistStore(store)
 // const store = createStore(appReducer, applyMiddleware(middleware, logger));
 
 export default store;
